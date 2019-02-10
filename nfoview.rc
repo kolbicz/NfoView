@@ -1,0 +1,86 @@
+#define	DIALOG					5011
+#define	IDC_EDIT				1000
+#define	ID_ICON					5007
+#define IDC_STATIC                             	-1
+#define IDC_CHECK                               3000
+#define IDC_SAVE                                5014
+#define IDC_CANCEL                              3003
+#define IDC_TITLE_TEXT                          3004
+#define IDC_TITLE_BACK                          3005
+#define IDC_EDIT_TEXT                           3006
+#define IDC_EDIT_BACK                           3007
+#define IDC_WND_BACK                            3008
+#define IDC_NFO                             3010
+#define IDC_DIZ                             3011
+#define IDC_STATIC_FONT				7000
+#define IDC_STATIC_BACK				7001
+#define IDC_STATIC_TITLE			7002	
+#define IDC_STATIC_CAPTION			7003
+#define IDC_STATIC_BORDER			7004
+#define IDC_ABOUT				7005
+
+IDB_BITMAP	BITMAP	"close.bmp"
+
+DIALOG DIALOGEX MOVEABLE IMPURE LOADONCALL DISCARDABLE	10, 10, 190, 140, 0
+STYLE 0x0004 | WS_BORDER | WS_VISIBLE | WS_POPUP
+FONT 8, "Tahoma", 500, 0 /*FALSE*/
+BEGIN
+    GROUPBOX        "Options", 	IDC_STATIC, 	6,4,178,30
+    GROUPBOX        "Colors", 	IDC_STATIC, 	6,42,178,75
+    CONTROL         "Enable Tray Icon", IDC_CHECK, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 13,18,68,8
+    LTEXT           "Font Color", 	IDC_STATIC, 	95,56,60,9, SS_LEFT
+    LTEXT           "Background Color", IDC_STATIC, 	95,66,60,9, SS_LEFT
+    LTEXT           "Title Text Color", IDC_STATIC, 	95,76,60,9, SS_LEFT
+    LTEXT           "Title Background", IDC_STATIC, 	95,86,60,9, SS_LEFT
+    LTEXT           "Border Color", 	IDC_STATIC, 	95,96,60,9, SS_LEFT
+    PUSHBUTTON      "About", 	IDC_ABOUT, 	  6,122,50,14
+    DEFPUSHBUTTON   "Save", 	IDC_SAVE, 	 70,122,50,14
+    PUSHBUTTON      "Cancel", 	IDC_CANCEL,	134,122,50,14
+
+    PUSHBUTTON      "Set", IDC_EDIT_TEXT, 	54,56,26,8
+    PUSHBUTTON      "Set", IDC_EDIT_BACK, 	54,66,26,8
+    PUSHBUTTON      "Set", IDC_TITLE_TEXT, 	54,76,26,8
+    PUSHBUTTON      "Set", IDC_TITLE_BACK, 	54,86,26,8
+    PUSHBUTTON      "Set", IDC_WND_BACK, 	54,96,26,8
+
+    CONTROL         "", IDC_STATIC_FONT, "Static", SS_BLACKFRAME, 	16,56,26,8
+    CONTROL         "", IDC_STATIC_BACK, "Static", SS_BLACKFRAME, 	16,66,26,8
+    CONTROL         "", IDC_STATIC_TITLE, "Static", SS_BLACKFRAME, 	16,76,26,8
+    CONTROL         "", IDC_STATIC_CAPTION, "Static", SS_BLACKFRAME, 	16,86,26,8
+    CONTROL         "", IDC_STATIC_BORDER, "Static", SS_BLACKFRAME, 	16,96,26,8
+
+    PUSHBUTTON      ".nfo", IDC_NFO, 	104,16,32,12
+    PUSHBUTTON      ".diz", IDC_DIZ, 	144,16,32,12
+END
+
+ID_ICON	ICON	"icon.ico"
+
+1 VERSIONINFO 
+FILEVERSION 4, 0, 1371, 1
+PRODUCTVERSION 4, 0, 1371, 1
+FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904B0"
+  {
+   VALUE "CompanyName", "HaRdLoCk [BLiZZARD/OxYGeN]\000"
+   VALUE "FileDescription", "NfoView application file\000"
+   VALUE "FileVersion", "1.00\000"
+   VALUE "InternalName", "NfoView\000"
+   VALUE "LegalCopyright", "Copyright (C) HaRdLoCk\000"
+   VALUE "OriginalFilename", "NFOVIEW.EXE\000"
+   VALUE "ProductName", "NfoView\000"
+   VALUE "ProductVersion", "1.00\000"
+  }
+
+ }
+
+ BLOCK "VarFileInfo"
+ {
+  VALUE "Translation", 1033, 1200
+ }
+
+}
